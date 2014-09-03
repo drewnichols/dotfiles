@@ -78,3 +78,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # Example aliases
 alias zshconfig="atom ~/dotfiles/zshrc"
 alias ohmyzsh="atom ~/.oh-my-zsh"
+
+# Configuring nvm as recommended when running brew install nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
