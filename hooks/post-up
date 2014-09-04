@@ -1,17 +1,21 @@
+#!/bin/sh
+echo "*** preup ***"
+
 # Install system software
 # Assumes commands in bootstrap.sh have been run on this machine
 # Make sure anything added here can be run more than once
 
 echo "Installing homebrew bundle..."
-brew bundle
+echo `pwd`
+brew bundle .Brewfile
 
 # Install npm packages needed for ember-cli
 echo "Installing npm packages..."
-npm install -g bower
-npm install -g phantomjs
+npm install -g bower > /dev/null
+npm install -g phantomjs > /dev/null
 
 echo "Installing PIP packages..."
-pip install git-sweep
+pip install git-sweep  > /dev/null
 
 echo "Installing symlinks..."
 # Use ssh-config from dropbox
