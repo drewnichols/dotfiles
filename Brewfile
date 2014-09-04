@@ -1,8 +1,21 @@
+# Install [homebrew](http://brew.sh)
+# > ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+#
+# Run this file:
+# > brew bundle Brewfile
+
+# Update to latest versions
+update
+upgrade
+
 # Homebrew packages
 install caskroom/cask/brew-cask
+install ack
 install git
-install hub
+install gh
 install nvm
+install python
+install resty
 
 # rcm
 tap thoughtbot/formulae
@@ -20,10 +33,11 @@ cask install atom
 # cask install filezilla
 cask install iterm2
 # cask install source-tree
-# cask install virtualbox
+cask install virtualbox
 # cask install vagrant
 cask install github
 cask install heroku-toolbelt
+cask install paparazzi
 
 # other
 cask install alfred
@@ -36,3 +50,7 @@ cask install flux
 cask install google-drive
 cask install slack
 cask install nvalt
+
+# Cleanup and doctor check
+cleanup
+doctor
