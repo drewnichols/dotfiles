@@ -16,6 +16,9 @@ install gh
 install nvm
 install python
 install resty
+install chruby
+install ruby-install
+install webkit2png
 
 # rcm
 tap thoughtbot/formulae
@@ -45,8 +48,8 @@ cask install dropbox
 cask install flux
 # cask install mou
 # cask install skype
-# cask install spotify
-# cask install u-torrent
+cask install spotify
+cask install utorrent
 cask install google-drive
 cask install slack
 cask install nvalt

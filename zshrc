@@ -85,3 +85,7 @@ source $(brew --prefix nvm)/nvm.sh
 
 source resty
 eval "$(gh alias -s)"
+
+# Configuring chruby as recommended when running brew install nvm
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh

@@ -21,4 +21,9 @@ echo "Installing symlinks..."
 # Use ssh-config from dropbox
 ln -s ~/Dropbox/.ssh-config ~/.ssh/config
 
+echo "Stuff to do manually..."
+echo "(From a new term session)"
+echo "ruby-install ruby"
+echo "gem install engineyard"
+
 echo "Install completed"
