@@ -5,7 +5,7 @@ xcode-select --install
 # Agree to xcode developer license
 sudo  xcodebuild -license
 # Install homebrew
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Run brew doctor to make sure everything is ok
 brew doctor
