@@ -10,8 +10,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Run brew doctor to make sure everything is ok
 brew doctor
 
-# now brew doctor tells us we need to update bash_profile to prefer brew installs
-echo export PATH='/usr/local/bin:$PATH' >> ~/.bash_profile
+# seems like /usr/local/bin is already in path but if not
+# brew doctor tells us we need to update bash_profile to prefer brew installs
+# echo export PATH='/usr/local/bin:$PATH' >> ~/.bash_profile
 
 # Install oh-my-zsh
 curl -L http://install.ohmyz.sh | sh
