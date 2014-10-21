@@ -1,9 +1,10 @@
 # Stuff that probably should just be run once per laptop
 
-# Install xcode developer tools (via terminal)
+# Install xcode developer tools (via terminal) or skip and install via AppStore
 xcode-select --install
-# Agree to xcode developer license
-sudo  xcodebuild -license
+# Either way agree to xcode developer license
+sudo xcodebuild -license
+
 # Install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -17,6 +18,9 @@ brew doctor
 # Install oh-my-zsh
 curl -L http://install.ohmyz.sh | sh
 
+# Install nvm
+brew install nvm
+
 # Customize zsh so nvm will work by adding this to end of .zshrc
 echo export NVM_DIR=~/.nvm >> ~/.zshrc
 echo source $(brew --prefix nvm)/nvm.sh >> ~/.zshrc
@@ -24,3 +28,5 @@ echo source $(brew --prefix nvm)/nvm.sh >> ~/.zshrc
 # Install latest version of node and set as default
 nvm install 0.10
 nvm alias default 0.10
+
+
