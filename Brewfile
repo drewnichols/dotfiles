@@ -10,6 +10,7 @@ upgrade
 
 # Homebrew packages
 install caskroom/cask/brew-cask
+install archey
 install ack
 install git
 install gh
@@ -19,6 +20,10 @@ install resty
 install chruby
 install ruby-install
 install webkit2png
+install ffmpeg
+install direnv
+install postgresql
+install ngrok
 
 # rcm
 tap thoughtbot/formulae
