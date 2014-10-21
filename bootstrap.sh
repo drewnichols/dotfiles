@@ -30,6 +30,11 @@ echo source /usr/local/opt/chruby/share/chruby/auto.sh >> ~/.zshrc
 nvm install 0.10
 nvm alias default 0.10
 
+# Install latest version of ruby and set as default
+ruby-install ruby 2.0
+echo chruby ruby-2.0 >> ~/.zshrc
+
+
 
 
 
