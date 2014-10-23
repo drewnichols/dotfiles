@@ -43,3 +43,9 @@ npm install -g phantomjs
 # Install global ruby gems
 gem install bundler
 gem install rails
+ARCHFLAGS="-arch x86_64" gem install pg
+
+# Need some extra steps to get nokogiri installed...
+brew tap homebrew/dupes
+brew install libiconv
+gem install nokogiri -- --with-iconv-dir=`brew --prefix libiconv`
