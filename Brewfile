@@ -58,6 +58,10 @@ cask install utorrent
 cask install google-drive
 cask install slack
 cask install nvalt
+cask install evernote
+cask install skitch
+
+
 
 # Cleanup and doctor check
 cleanup
