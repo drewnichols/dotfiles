@@ -24,6 +24,7 @@ install ffmpeg
 install direnv
 install postgresql
 install ngrok
+install --HEAD hub
 
 # rcm
 tap thoughtbot/formulae
