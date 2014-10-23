@@ -51,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -78,14 +78,19 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # Example aliases
 alias zshconfig="atom ~/.zshrc"
 alias ohmyzsh="atom ~/.oh-my-zsh"
-
-# Configuring nvm as recommended when running brew install nvm
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+source /usr/local/opt/nvm/nvm.sh
 
-source resty
-eval "$(gh alias -s)"
-
-# Configuring chruby as recommended when running brew install nvm
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
+chruby ruby-2.1.3
+eval
+_direnv_hook() {
+  eval "$(direnv export zsh)";
+}
+typeset -a precmd_functions
+if [[ -z $precmd_functions[(r)_direnv_hook] ]]; then
+  precmd_functions+=_direnv_hook;
+fi
