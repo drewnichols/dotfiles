@@ -86,6 +86,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 chruby ruby-2.1.3
+alias git=hub
 eval
 _direnv_hook() {
   eval "$(direnv export zsh)";
