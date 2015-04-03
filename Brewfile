@@ -53,7 +53,7 @@ cask install alfred
 cask install dropbox
 cask install flux
 # cask install mou
-# cask install skype
+cask install skype
 cask install spotify
 cask install utorrent
 cask install google-drive

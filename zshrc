@@ -87,6 +87,12 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 chruby ruby-2.1.3
 alias git=hub
+
+export PATH="/usr/local/heroku/bin:$PATH"
+export JAVA_HOME=`/usr/libexec/java_home`
+
+export EXPERIAN_ETC_HOSTS_TEST=true
+
 eval
 _direnv_hook() {
   eval "$(direnv export zsh)";
