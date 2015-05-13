@@ -101,3 +101,4 @@ typeset -a precmd_functions
 if [[ -z $precmd_functions[(r)_direnv_hook] ]]; then
   precmd_functions+=_direnv_hook;
 fi
+export PATH="/usr/local/sbin:$PATH"
