@@ -43,6 +43,7 @@ npm install -g phantomjs
 # Install global ruby gems
 gem install bundler
 gem install rails
+gem install gem-path
 ARCHFLAGS="-arch x86_64" gem install pg
 
 # Need some extra steps to get nokogiri installed...

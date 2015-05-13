@@ -1,9 +1,12 @@
 [user]
 	name = mikegrassotti
 	email = mgrassotti@gmail.com
+[credential]
+	helper = osxkeychain
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
 [push]
   default = current
 [color]
@@ -22,3 +25,4 @@
   pr = !hub pull-request
   st = status
   up = !git fetch origin && git rebase origin/master
+	ll = log --oneline --decorate --color
