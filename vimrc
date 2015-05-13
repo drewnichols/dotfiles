@@ -1,23 +1,14 @@
-" A minimal vimrc for new vim users to start with.
-"
-" Referenced here: http://www.benorenstein.com/blog/your-first-vimrc-should-be-nearly-empty/
+" A minimal vimrc
 
-" Original Author:	 Bram Moolenaar <Bram@vim.org>
-" Made more minimal by:  Ben Orenstein
-" Last change:	         2012 Jan 20
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"
-" AFTER EDITING, RELOAD WITH:
-" :so ~/.vimrc
-"
-"  If you don't understand a setting in here, just type ':h setting'.
-
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
 set nocompatible
+
+" VIM-PLUG
+call plug#begin('~/.vim/plugged')
+  Plug 'tpope/vim-sensible'
+  Plug 'junegunn/vim-easy-align'
+  Plug 'bling/vim-airline'
+call plug#end()
+
 
 " Make backspace behave in a sane manner.
 set backspace=indent,eol,start
@@ -40,21 +31,10 @@ au FocusLost * :wa
 au FocusLost * silent! wa
 
 " Shortcuts
-map <leader>k :E<cr> 
-map <leader>, :E<cr> 
-map <leader>m :bn<cr> 
-map <leader>. :bp<cr> 
-map <leader>vv :so ~/.vimrc<cr> 
 nmap <leader>bq :bp <BAR> bd #<cr>
-map <F1> :ls<cr>
 
-
-" :nnoremap <C-n> :bnext<CR>
-" :nnoremap <C-p> :bprevious<CR>
-
-:nnoremap <C-n> :bnext<CR>:redraw<CR>:ls<CR> 
-:nnoremap <C-p> :bprevious<CR>:redraw<CR>:ls<CR>
-
+:nnoremap <C-n> :bnext<CR>
+:nnoremap <C-p> :bprevious<CR>
 
 " Experimental...
 " http://getpocket.com/a/read/646417642
@@ -71,9 +51,22 @@ set ts=2 sts=2 sw=2 expandtab
 
 ".vimrc
 "..Source the vimrc file after saving it
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
-echo '.vimrc updated!'
+"if has("autocmd")
+"  autocmd bufwritepost vimrc echo "NICE!"
+"  autocmd bufwritepost vimrc source $MYVIMRC
+"endif
+augroup reload_vimrc " {
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
 nnoremap <leader>v :tabedit $MYVIMRC<CR>
+echo '.vimrc updated v0.1'
 
+
+
+" TAB MADNESS
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+"let g:airline#extensions#tabline#fnamemod = ':t'
