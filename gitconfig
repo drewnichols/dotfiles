@@ -26,3 +26,5 @@
   st = status
   up = !git fetch origin && git rebase origin/master
 	ll = log --oneline --decorate --color
+[core]
+	excludesfile = ~/.gitignore-global
