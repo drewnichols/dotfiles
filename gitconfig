@@ -28,3 +28,4 @@
 	ll = log --oneline --decorate --color
 [core]
 	excludesfile = /Users/mpg/.gitignore_global
+	editor = /usr/bin/vim
