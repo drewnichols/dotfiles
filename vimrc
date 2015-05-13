@@ -9,16 +9,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'bling/vim-airline'
 call plug#end()
 
-
-" Make backspace behave in a sane manner.
-set backspace=indent,eol,start
-
-" Switch syntax highlighting on
-syntax on
-
-" Enable file type detection and do language-dependent indenting.
-filetype plugin indent on
-
 " use comma as leader key
 let mapleader=","
 
@@ -60,7 +50,6 @@ augroup reload_vimrc " {
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
 nnoremap <leader>v :tabedit $MYVIMRC<CR>
-echo '.vimrc updated v0.1'
 
 
 
