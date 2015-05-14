@@ -51,3 +51,9 @@ ARCHFLAGS="-arch x86_64" gem install pg
 brew tap homebrew/dupes
 brew install libiconv
 gem install nokogiri -- --with-iconv-dir=`brew --prefix libiconv`
+
+
+# Maybe...
+pip install git-sweep  > /dev/null
+ln -s ~/Dropbox/.ssh-config ~/.ssh/config
+
