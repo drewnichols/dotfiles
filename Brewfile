@@ -1,69 +1,55 @@
-# Install [homebrew](http://brew.sh)
-# > ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-#
-# Run this file:
-# > brew bundle Brewfile
-
-# Update to latest versions
-update
-upgrade
-
 # Homebrew packages
-install caskroom/cask/brew-cask
-install archey
-install ack
-install git
-install gh
-install nvm
-install python
-install resty
-install chruby
-install ruby-install
-install webkit2png
-install ffmpeg
-install direnv
-install postgresql
-install ngrok
-install --HEAD hub
+brew caskroom/cask/brew-cask
+brew archey
+brew ack
+brew git
+brew gh
+brew nvm
+brew python
+brew resty
+brew chruby
+brew ruby-brew
+brew webkit2png
+brew ffmpeg
+brew direnv
+brew postgresql
+brew ngrok
+brew 'redis'
+brew --HEAD hub
 
 # rcm
-tap thoughtbot/formulae
-install rcm
+# tap thoughtbot/formulae
+# brew rcm
 
 # Browsers
-# cask install firefox-aurora
-cask install google-chrome
-# cask install google-chrome-canary
-# cask install opera-next
+# cask firefox-aurora
+cask google-chrome
+# cask google-chrome-canary
+# cask opera-next
 
 # development
-# cask install sublime-text-3
-cask install atom
-# cask install filezilla
-cask install iterm2
-# cask install source-tree
-cask install virtualbox
-# cask install vagrant
-cask install github
-cask install heroku-toolbelt
-cask install paparazzi
+# cask sublime-text-3
+# cask atom
+# cask filezilla
+cask iterm2
+# cask source-tree
+# cask virtualbox
+# cask vagrant
+cask github
+cask heroku-toolbelt
+# cask paparazzi
 
 # other
-cask install alfred
-cask install dropbox
-cask install flux
-# cask install mou
-cask install skype
-cask install spotify
-cask install utorrent
-cask install google-drive
-cask install slack
-cask install nvalt
-cask install evernote
-cask install skitch
+cask alfred
+cask dropbox
+cask flux
+cask mou
+cask skype
+cask spotify
+cask utorrent
+cask google-drive
+cask slack
+# cask nvalt
+cask evernote
+cask skitch
 
-
-
-# Cleanup and doctor check
-cleanup
-doctor

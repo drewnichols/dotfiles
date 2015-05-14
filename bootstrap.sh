@@ -1,22 +1,23 @@
 # Stuff that probably should just be run once per laptop
 
-# Install xcode developer tools (via terminal) or skip and install via AppStore
+- [x] Install xcode developer tools (via terminal) or skip and install via AppStore
 xcode-select --install
-# Either way agree to xcode developer license
+- [ ] Either way agree to xcode developer license
 sudo xcodebuild -license
 
-# Install oh-my-zsh
-curl -L http://install.ohmyz.sh | sh
-
-# Install homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Run brew doctor to make sure everything is ok
-brew doctor
-
-# Clone this repo
+- [x] Clone this repo
 git clone https://github.com/mikegrassotti/dotfiles.git && cd dotfiles
 
+- [x] Install oh-my-zsh
+curl -L http://install.ohmyz.sh | sh
+
+- [x] Install homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+- [x] Run brew doctor to make sure everything is ok
+brew doctor
+- [ ] Install Brew Bundle
+brew tap Homebrew/bundle
 # Install libs and apps via brew bundle
 brew bundle
 
