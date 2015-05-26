@@ -14,6 +14,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-sensible'
   Plug 'junegunn/vim-easy-align'
   Plug 'bling/vim-airline'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-repeat'
 call plug#end()
 
 " use comma as leader key

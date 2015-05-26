@@ -1,4 +1,5 @@
 # Path to your oh-my-zsh installation.
+echo "zshrc..."
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -51,7 +52,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -83,22 +84,15 @@ source /usr/local/opt/nvm/nvm.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 chruby ruby-2.1.3
 alias git=hub
 
-export PATH="/usr/local/heroku/bin:$PATH"
 export JAVA_HOME=`/usr/libexec/java_home`
 
 export EXPERIAN_ETC_HOSTS_TEST=true
 
-eval
-_direnv_hook() {
-  eval "$(direnv export zsh)";
-}
-typeset -a precmd_functions
-if [[ -z $precmd_functions[(r)_direnv_hook] ]]; then
-  precmd_functions+=_direnv_hook;
-fi
-export PATH="/usr/local/sbin:$PATH"
+
+eval "$(direnv hook zsh)"
