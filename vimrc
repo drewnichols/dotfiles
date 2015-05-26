@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/vim-easy-align'
   Plug 'bling/vim-airline'
   Plug 'tpope/vim-surround'
+  Plug 'gioele/vim-autoswap'
   Plug 'tpope/vim-repeat'
 call plug#end()
 
