@@ -1,0 +1,12 @@
+--type-add=css=.sass,.scss,.less
+--type-add=js=.rjs,.coffee
+--type-add=ruby=.erb
+--ignore-dir=vendor
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=doc
+--ignore-dir=public/system
+--sort-files
+--color
+--follow
+--group

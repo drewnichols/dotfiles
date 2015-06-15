@@ -17,13 +17,15 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'gioele/vim-autoswap'
   Plug 'tpope/vim-repeat'
+  Plug 'wincent/Command-T'
+  Plug 'tpope/vim-commentary'
 call plug#end()
 
 " use comma as leader key
 let mapleader=","
 
 " Make it easy to use mouse for selecting, copy/paste and scroll...
-set mouse=a
+set mouse=r
 
 " Save buffers
 set autowriteall
