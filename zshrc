@@ -21,7 +21,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -103,3 +103,5 @@ export DOCKER_CERT_PATH=/Users/mpg/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
 export HOMEBREW_GITHUB_API_TOKEN=442c95a78656dec3eefe9e1d3b8fd2602749d43e
+
+source ~/.bin/tmuxinator.zsh
