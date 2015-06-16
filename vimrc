@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'wincent/Command-T'
   Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " use comma as leader key
@@ -52,17 +53,7 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 set ts=2 sts=2 sw=2 expandtab
 
 ".vimrc
-"..Source the vimrc file after saving it
-"if has("autocmd")
-"  autocmd bufwritepost vimrc echo "NICE!"
-"  autocmd bufwritepost vimrc source $MYVIMRC
-"endif
-augroup reload_vimrc " {
-  autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END " }
-nnoremap <leader>v :tabedit $MYVIMRC<CR>
-
+nnoremap <leader>v :source $MYVIMRC<CR>
 
 
 " TAB MADNESS
