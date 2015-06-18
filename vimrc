@@ -20,10 +20,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'wincent/Command-T'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " use comma as leader key
 let mapleader=","
+
+" show line numbers
+set nu
 
 " Make it easy to use mouse for selecting, copy/paste and scroll...
 set mouse=r
