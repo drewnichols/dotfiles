@@ -30,14 +30,14 @@ root: ~/code/lf
 windows:
   - lift:
       root: ~/code/lf/lift
-      layout: main-vertical
+      layout: main-horizontal
       panes:
         - vim
         - ember test --server
         # - ember server -p 4201
   - api:
       root: ~/code/lf/api
-      layout: main-vertical
+      layout: main-horizontal
       panes:
         - vim
         - bin/rspec spec
