@@ -66,3 +66,13 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
 "let g:airline#extensions#tabline#fnamemod = ':t'
+"
+
+" command-t
+let g:CommandTMaxFiles=100100
+let g:CommandTMaxDepth=10
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,solr/**,log/**,*.psd,*.PSD,.git/**,.gitkeep,.gems/**
+set wildignore+=*.ico,*.ICO,backup/**,*.sql,*.dump,*.tmp,*.min.js
+set wildignore+=*.png,*.PNG,*.JPG,*.jpg,*.JPEG,*.jpeg,*.GIF,*.gif,*.pdf,*.PDF
+set wildignore+=coverage/**,tmp/**,rdoc/**,*.BACKUP.*,*.BASE.*,*.LOCAL.*,*.REMOTE.*,.sass-cache/**
