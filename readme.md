@@ -14,7 +14,7 @@ Something like this process should get new laptop working...
     git clone https://github.com/mikegrassotti/dotfiles.git
     ln -s dotfiles/vimrc .vimrc
     ln -s dotfiles/zshrc .zshrc
-    # maybe add more link ackrc, tmux, etc...
+    # maybe more link ackrc, tmux, etc...
     cd dotfiles
 
 ### Install oh-my-zsh
@@ -59,5 +59,8 @@ gem install pg
 gem install nokogiri -- --with-iconv-dir=`brew --prefix libiconv`
 ````
 
+## Using vim...
 
-# 
+Start vim - plugins should install automagically. 
+To see if it worked, run `:PlugStatus` and maybe `:PlugInstall` if needed
+Leader key is mapped to `,` 
