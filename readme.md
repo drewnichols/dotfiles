@@ -21,9 +21,6 @@ Something like this process should get new laptop working...
 
     curl -L http://install.ohmyz.sh | sh
 
-### Symlink these files from your home directory to use dotfiles version
-
-
 ### Install homebrew
    
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
