@@ -20,7 +20,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'wincent/Command-T'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-unimpaired'
   Plug 'airblade/vim-gitgutter'
+  Plug 'rking/ag.vim'
 call plug#end()
 
 " use comma as leader key
@@ -31,6 +33,7 @@ set nu
 
 " Make it easy to use mouse for selecting, copy/paste and scroll...
 set mouse=r
+
 
 " Save buffers
 set autowriteall
@@ -76,3 +79,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,solr/**,log/**,*.psd,*.PSD,.git/**,.git
 set wildignore+=*.ico,*.ICO,backup/**,*.sql,*.dump,*.tmp,*.min.js
 set wildignore+=*.png,*.PNG,*.JPG,*.jpg,*.JPEG,*.jpeg,*.GIF,*.gif,*.pdf,*.PDF
 set wildignore+=coverage/**,tmp/**,rdoc/**,*.BACKUP.*,*.BASE.*,*.LOCAL.*,*.REMOTE.*,.sass-cache/**
+
+" silver-searcher 
+let g:ackprg = 'ag --nogroup --nocolor --column'
