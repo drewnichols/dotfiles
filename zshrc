@@ -77,8 +77,10 @@ export ARCHFLAGS="-arch x86_64"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="atom ~/.zshrc"
-alias ohmyzsh="atom ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias zzz="source ~/.zshrc"
+
 export NVM_DIR=~/.nvm
 source /usr/local/opt/nvm/nvm.sh
 
@@ -88,7 +90,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 chruby ruby-2.1.3
-alias git=hub
 
 export JAVA_HOME=`/usr/libexec/java_home`
 
@@ -105,3 +106,7 @@ export DOCKER_TLS_VERIFY=1
 export HOMEBREW_GITHUB_API_TOKEN=442c95a78656dec3eefe9e1d3b8fd2602749d43e
 
 source ~/dotfiles/tmuxinator.zsh
+
+
+# Set command-line editor to be vi
+set -o vi
