@@ -8,7 +8,7 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 [push]
-  default = current
+	default = simple
 [color]
   ui = auto
 [alias]
