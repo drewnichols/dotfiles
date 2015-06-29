@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'rking/ag.vim'
   Plug 'mustache/vim-mustache-handlebars'
+  Plug 'nelstrom/vim-qargs'
 call plug#end()
 
 " use comma as leader key
@@ -67,6 +68,7 @@ set wildignore+=*.ico,*.ICO,backup/**,*.sql,*.dump,*.tmp,*.min.js
 set wildignore+=*.png,*.PNG,*.JPG,*.jpg,*.JPEG,*.jpeg,*.GIF,*.gif,*.pdf,*.PDF
 set wildignore+=coverage/**,tmp/**,rdoc/**,*.BACKUP.*,*.BASE.*,*.LOCAL.*,*.REMOTE.*,.sass-cache/**
 set wildignore+=node_modules/**/node_modules/**
+set wildignore+=.DS_Store
 
 " Use silver-searcher 
 let g:ackprg = 'ag --nogroup --nocolor --column'
