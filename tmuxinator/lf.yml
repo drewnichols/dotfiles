@@ -33,11 +33,11 @@ windows:
       layout: main-horizontal
       panes:
         - vim
-        - ember test --server
+        - pwd
         # - ember server -p 4201
   - api:
       root: ~/code/lf/api
       layout: main-horizontal
       panes:
         - vim
-        - bin/rspec spec
+        - pwd
