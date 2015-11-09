@@ -82,4 +82,17 @@ set hlsearch
 " displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
+""
+"" Backup and swap files
+""
+set backupdir=~/.vim/_backup//    " where to put backup files.
+set directory=~/.vim/_temp//      " where to put swap files.
+
+" allow undo history to persist after closing buffer
+if has('persistent_undo')
+  set undodir=~/.vim/_undo
+  set undofile
+end
+
+
 let g:mustache_abbreviations = 1
