@@ -64,6 +64,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " command-t
 let g:CommandTAlwaysShowDotFiles=1
 let g:CommandTMatchWindowAtTop=1
+let g:CommandTCancelMap='<C-x>'
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,solr/**,log/**,*.psd,*.PSD,.git/**,.gitkeep,.gems/**
 set wildignore+=*.ico,*.ICO,backup/**,*.sql,*.dump,*.tmp,*.min.js
@@ -96,3 +97,6 @@ end
 
 
 let g:mustache_abbreviations = 1
+
+
+
