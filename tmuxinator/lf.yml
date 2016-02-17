@@ -34,9 +34,14 @@ windows:
       panes:
         - vim
         - pwd
-        # - ember server -p 4201
   - api:
       root: ~/code/lf/api
+      layout: main-horizontal
+      panes:
+        - vim
+        - pwd
+  - admin:
+      root: ~/code/lf/lift-admin
       layout: main-horizontal
       panes:
         - vim
