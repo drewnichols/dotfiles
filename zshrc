@@ -106,6 +106,8 @@ eval "$(direnv hook zsh)"
 
 source ~/dotfiles/tmuxinator.zsh
 
+# For tmuxp
+export DISABLE_AUTO_TITLE="true"
 
 # Set command-line editor to be vi
 set -o vi

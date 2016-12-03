@@ -26,6 +26,7 @@
   st = status
   up = !git fetch origin && git rebase origin/master
 	ll = log --oneline --decorate --color
+	fpush = push --force origin
 [core]
 	excludesfile = /Users/mpg/.gitignore_global
 	editor = /usr/bin/vim
