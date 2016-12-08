@@ -27,6 +27,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'nelstrom/vim-qargs'
   Plug 'tpope/vim-dispatch'
   Plug 'JarrodCTaylor/vim-ember-cli-test-runner'
+  Plug 'SirVer/ultisnips'
+  Plug 'alexlafroscia/vim-ember-cli'
 call plug#end()
 
 " use comma as leader key
@@ -64,7 +66,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " command-t
 let g:CommandTAlwaysShowDotFiles=1
 let g:CommandTMatchWindowAtTop=1
-let g:CommandTCancelMap='<C-x>'
+let g:CommandTCancelMap=['<C-x>', '<C-c>']
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,solr/**,log/**,*.psd,*.PSD,.git/**,.gitkeep,.gems/**
 set wildignore+=*.ico,*.ICO,backup/**,*.dump,*.tmp,*.min.js
@@ -98,5 +100,13 @@ end
 
 let g:mustache_abbreviations = 1
 
+"Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
+"Open new split panes to right and bottom, which feels more natural than Vim’s default:
+set splitbelow
+set splitright
 
