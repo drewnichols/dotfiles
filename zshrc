@@ -1,5 +1,4 @@
 # Path to your oh-my-zsh installation.
-echo "zshrc..."
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -85,6 +84,12 @@ export ARCHFLAGS="-arch x86_64"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zzz="source ~/.zshrc"
+
+alias e="ember"
+alias dots="tmuxp load ~/dotfiles/dots.yaml"
+alias mux="tmuxp load"
+alias muxk="tmux kill-session -t"
+alias muxka="tmux ls | cut -d: -f1 | xargs -L1 tmux kill-session -t"
 
 export NVM_DIR=~/.nvm
 source /usr/local/opt/nvm/nvm.sh
