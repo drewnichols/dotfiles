@@ -1,8 +1,0 @@
-session_name: dots
-start_directory: ~/dotfiles
-windows:
-  - window_name: long form
-    panes:
-      - shell_command:
-        - echo hello
-        - echo hello

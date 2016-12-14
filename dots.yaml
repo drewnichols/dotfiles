@@ -1,0 +1,8 @@
+session_name: dots
+start_directory: ~/dotfiles
+windows:
+  - window_name: editor 
+    panes:
+      - shell_command: vim
+        focus: true
+      - shell_command: git status
