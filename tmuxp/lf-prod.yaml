@@ -1,0 +1,15 @@
+session_name: lf-prod
+start_directory: ~/code/lf/api
+windows:
+  - window_name: ps
+    layout: main-horizontal
+    panes:
+      - shell_command: watch heroku ps
+  - window_name: console
+    layout: main-horizontal
+    panes:
+      - shell_command: heroku run console
+      - shell_command: heroku logs --source app --tail
+  - window_name: db
+    panes:
+      - shell_command: heroku pg:psql

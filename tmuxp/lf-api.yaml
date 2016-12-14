@@ -1,0 +1,17 @@
+session_name: lf-api
+start_directory: ~/code/lf/api
+windows:
+  - window_name: editor
+    layout: main-horizontal
+    panes:
+      - shell_command: vim
+      - shell_command: guard
+  - window_name: console
+    panes:
+      - shell_command: bin/rails console
+  - window_name: db
+    panes:
+      - shell_command: psql -d api_development
+  - window_name: server
+    panes:
+      - shell_command: bin/rails server
