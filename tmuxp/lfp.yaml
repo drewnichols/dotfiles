@@ -1,5 +1,7 @@
-session_name: lf-prod
+session_name: lfp
 start_directory: ~/code/lf/api
+options:
+  status-bg: red
 windows:
   - window_name: ps
     layout: main-horizontal

@@ -27,7 +27,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'nelstrom/vim-qargs'
   Plug 'tpope/vim-dispatch'
   Plug 'JarrodCTaylor/vim-ember-cli-test-runner'
-  Plug 'SirVer/ultisnips'
   Plug 'alexlafroscia/vim-ember-cli'
 call plug#end()
 
@@ -66,6 +65,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " command-t
 let g:CommandTAlwaysShowDotFiles=1
 let g:CommandTMatchWindowAtTop=1
+let g:CommandTMatchWindowReverse=0
 let g:CommandTCancelMap=['<C-x>', '<C-c>']
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,solr/**,log/**,*.psd,*.PSD,.git/**,.gitkeep,.gems/**

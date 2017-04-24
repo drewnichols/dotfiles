@@ -1,5 +1,7 @@
 session_name: dots
 start_directory: ~/dotfiles
+options:
+  status-bg: black
 windows:
   - window_name: editor 
     panes:

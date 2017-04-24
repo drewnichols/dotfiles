@@ -1,0 +1,10 @@
+session_name: docs
+start_directory: ~/code/lf/docs
+options:
+  status-bg: blue
+windows:
+  - window_name: editor
+    layout: main-horizontal
+    panes:
+      - shell_command: vim
+      - 

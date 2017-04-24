@@ -99,17 +99,16 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby ruby-2.1.3
+chruby ruby-2.3.1
 
 # export JAVA_HOME=`/usr/libexec/java_home`
 
 export EXPERIAN_ETC_HOSTS_TEST=true
 
+export GOPATH=$HOME/code/go
+export PATH=$PATH:$GOPATH/bin
 
 eval "$(direnv hook zsh)"
-
-
-source ~/dotfiles/tmuxinator.zsh
 
 # For tmuxp
 export DISABLE_AUTO_TITLE="true"

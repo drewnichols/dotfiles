@@ -1,0 +1,13 @@
+session_name: lift
+start_directory: ~/code/lf/lift
+options:
+  status-bg: blue
+windows:
+  - window_name: editor
+    layout: main-horizontal
+    panes:
+      - shell_command: vim
+      - shell_command: ember server
+  - window_name: console
+    panes:
+      - shell_command: echo hello

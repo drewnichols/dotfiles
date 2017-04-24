@@ -1,8 +1,0 @@
-session_name: ember 
-start_directory: ~/code/lf/lift
-windows:
-  - window_name: dev
-    panes:
-      - shell_command: vim
-      - shell_command: echo hello
-      - shell_command: echo hello

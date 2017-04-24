@@ -1,5 +1,8 @@
-session_name: lf-api
+session_name: lfapi
 start_directory: ~/code/lf/api
+shell_command_before: "echo ${PWD}"
+options:
+  status-bg: blue
 windows:
   - window_name: editor
     layout: main-horizontal
