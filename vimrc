@@ -17,7 +17,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'gioele/vim-autoswap'
   Plug 'tpope/vim-repeat'
-  Plug 'wincent/Command-T'
+  Plug 'wincent/Command-T', {
+    \  'do': 'cd ruby/command-t && ruby extconf.rb && make'
+    \ }
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-unimpaired'
@@ -88,8 +90,8 @@ set hlsearch
 ""
 "" Backup and swap files
 ""
-set backupdir=~/.vim/_backup//    " where to put backup files.
-set directory=~/.vim/_temp//      " where to put swap files.
+" set backupdir=~/.vim/_backup//    " where to put backup files.
+" set directory=~/.vim/_temp//      " where to put swap files.
 
 " allow undo history to persist after closing buffer
 if has('persistent_undo')
