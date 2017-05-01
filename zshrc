@@ -1,117 +1,32 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+echo "mikegrassotti/dotfiles/zshrc: **** START ****"
+echo "mikegrassotti/dotfiles/zshrc: Loading antigen..."
+source /usr/local/share/antigen/antigen.zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+antigen bundle Tarrasch/zsh-autoenv
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# Load the theme.
+antigen theme robbyrussell
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+# Tell antigen that you're done.
+antigen apply
 
-# Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
+echo "mikegrassotti/dotfiles/zshrc: Sourcing custom zsh configuration files..."
+source ~/.dotfiles/zsh/secrets.zsh
+source ~/.dotfiles/zsh/sources.zsh
+source ~/.dotfiles/zsh/aliases.zsh
+source ~/.dotfiles/zsh/exports.zsh
+source ~/.dotfiles/zsh/setopt.zsh
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/dotfiles/zsh_custom
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-# Load secret env variables like s3 keys etc...
-if [ -e ~/.secrets ]; then
-  source ~/.secrets
-fi
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
-
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias zzz="source ~/.zshrc"
-
-alias e="ember"
-alias dots="tmuxp load ~/dotfiles/dots.yaml"
-alias mux="tmuxp load"
-alias muxk="tmux kill-session -t"
-alias muxka="tmux ls | cut -d: -f1 | xargs -L1 tmux kill-session -t"
-
-export NVM_DIR=~/.nvm
-source /usr/local/opt/nvm/nvm.sh
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby ruby-2.3.1
-
-# export JAVA_HOME=`/usr/libexec/java_home`
-
-export EXPERIAN_ETC_HOSTS_TEST=true
-
-export GOPATH=$HOME/code/go
-export PATH=$PATH:$GOPATH/bin
-
-eval "$(direnv hook zsh)"
-
-# For tmuxp
-export DISABLE_AUTO_TITLE="true"
-
-# Set command-line editor to be vi
-set -o vi
+echo "mikegrassotti/dotfiles/script/setup: **** COMPLETED ****"

@@ -1,0 +1,8 @@
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias zzz="source ~/.zshrc"
+alias e="ember"
+alias dots="tmuxp load ~/dotfiles/dots.yaml"
+alias mux="tmuxp load"
+alias muxk="tmux kill-session -t"
+alias muxka="tmux ls | cut -d: -f1 | xargs -L1 tmux kill-session -t"
