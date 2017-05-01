@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# script/setup: Set up application for the first time after cloning, or set it
+#               back to the initial first unused state.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+script/bootstrap
+
+echo "==> mikegrassotti/dotfiles/script/setup: **** START ****"
+echo "==> mikegrassotti/dotfiles/script/setup: adding dotfile symlinks to home directory"
+echo ". .zshrc"
+ln -sf ~/.dotfiles/zshrc ~/.zshrc
+echo ". .vimrc"
+ln -sf ~/.dotfiles/vimrc ~/.vimrc
+
+echo "==> mikegrassotti/dotfiles/script/setup: dotfile symlinks added"
+
+echo "==> mikegrassotti/dotfiles/script/setup: setting UserShell to /usr/local/bin/zsh"
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+sudo dscl . -read /Users/$USER UserShell
+echo "==> mikegrassotti/dotfiles/script/setup: UserShell has been set"
+
+echo "mikegrassotti/dotfiles/script/setup: **** COMPLETED ****"
