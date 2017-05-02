@@ -47,5 +47,10 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 # if [ $? -eq 1 ]; then
 #   open "${HOME}/.dotfiles/iterm2/argonaut.itermcolors"
 # fi
-echo "> Set your iTerm2 custom folder to '${HOME}/.dotfiles/iterm2'."
+# Warn if iterm2 preferences are not being loaded from dotfiles
+defaults read com.googlecode.iterm2 "PrefsCustomFolder" | grep -q "${HOME}/.dotfiles/iterm2"
+if [ $? -eq 1 ]; then
+  echo "> ***** MANUAL INSTALLATION STEP REQUIRED ***** Set iTerm2 Preferences to load from '${HOME}/.dotfiles/iterm2'."
+fi
+
 
