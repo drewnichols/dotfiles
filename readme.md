@@ -16,3 +16,7 @@
 This script will automatically download your dotfiles repo then run it's script/setup.sh script.
 It will also download and run your brew bundle file if you have one in /{gituser}/homebrew-brewfile/Brewfile
 
+Notes and issues
+ - had to remove git credentials from the osx keychain
+ 
+ 
