@@ -9,26 +9,26 @@ cd "$(dirname "$0")/.."
 
 script/bootstrap
 
-echo "==> mikegrassotti/dotfiles/script/setup: **** START ****"
-echo "==> mikegrassotti/dotfiles/script/setup: adding dotfile symlinks to home directory"
+echo "==> $HOME/.dotfiles/script/setup: **** START ****"
+echo "==> $HOME/.dotfiles/script/setup: adding .dotfile symlinks to home directory"
 echo ". .zshrc"
 ln -sf ~/.dotfiles/zshrc ~/.zshrc
 echo ". .vimrc"
 ln -sf ~/.dotfiles/vimrc ~/.vimrc
 
-echo "==> mikegrassotti/dotfiles/script/setup: dotfile symlinks added"
+echo "==> $HOME/.dotfiles/script/setup: .dotfile symlinks added"
 
-echo "==> mikegrassotti/dotfiles/script/setup: setting UserShell to /usr/local/bin/zsh"
+echo "==> $HOME/.dotfiles/script/setup: setting UserShell to /usr/local/bin/zsh"
 sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 sudo dscl . -read /Users/$USER UserShell
-echo "==> mikegrassotti/dotfiles/script/setup: UserShell has been set"
+echo "==> $HOME/.dotfiles/script/setup: UserShell has been set"
 
-echo "==> mikegrassotti/dotfiles/script/setup: setting custom OSX preferences"
+echo "==> $HOME/.dotfiles/script/setup: setting custom OSX preferences"
 zsh osx/set-defaults.zsh
-echo "==> mikegrassotti/dotfiles/script/setup: OSX preferences have been set"
+echo "==> $HOME/.dotfiles/script/setup: OSX preferences have been set"
 
-echo "==> mikegrassotti/dotfiles/script/setup: nvm"
-nvm install node --reinstall-packages-from=node
-echo "nvm"
+#echo "==> $HOME/.dotfiles/script/setup: nvm"
+#nvm install node --reinstall-packages-from=node
+#echo "nvm"
 
-echo "mikegrassotti/dotfiles/script/setup: **** COMPLETED ****"
+echo "$HOME/.dotfiles/script/setup: **** COMPLETED ****"
