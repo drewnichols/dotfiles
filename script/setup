@@ -23,4 +23,12 @@ sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 sudo dscl . -read /Users/$USER UserShell
 echo "==> mikegrassotti/dotfiles/script/setup: UserShell has been set"
 
+echo "==> mikegrassotti/dotfiles/script/setup: setting custom OSX preferences"
+zsh osx/set-defaults.zsh
+echo "==> mikegrassotti/dotfiles/script/setup: OSX preferences have been set"
+
+echo "==> mikegrassotti/dotfiles/script/setup: nvm"
+nvm install node --reinstall-packages-from=node
+echo "nvm"
+
 echo "mikegrassotti/dotfiles/script/setup: **** COMPLETED ****"
