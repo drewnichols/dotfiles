@@ -32,5 +32,7 @@ source ~/.dotfiles/zsh/aliases.zsh
 source ~/.dotfiles/zsh/exports.zsh
 source ~/.dotfiles/zsh/setopt.zsh
 
+# Initialize rbenv
+eval "$(rbenv init -)"
 
 # echo "mikegrassotti/dotfiles/zshrc: **** COMPLETED ****"
