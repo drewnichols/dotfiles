@@ -10,12 +10,12 @@ cd "$(dirname "$0")/.."
 script/bootstrap
 
 echo "==> $HOME/.dotfiles/script/setup: **** START ****"
+
 echo "==> $HOME/.dotfiles/script/setup: adding .dotfile symlinks to home directory"
 echo ". .zshrc"
 ln -sf ~/.dotfiles/zshrc ~/.zshrc
 echo ". .vimrc"
 ln -sf ~/.dotfiles/vimrc ~/.vimrc
-
 echo "==> $HOME/.dotfiles/script/setup: .dotfile symlinks added"
 
 echo "==> $HOME/.dotfiles/script/setup: setting UserShell to /usr/local/bin/zsh"
