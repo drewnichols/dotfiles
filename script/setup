@@ -27,8 +27,4 @@ echo "==> $HOME/.dotfiles/script/setup: setting custom OSX preferences"
 zsh osx/set-defaults.zsh
 echo "==> $HOME/.dotfiles/script/setup: OSX preferences have been set"
 
-#echo "==> $HOME/.dotfiles/script/setup: nvm"
-#nvm install node --reinstall-packages-from=node
-#echo "nvm"
-
 echo "$HOME/.dotfiles/script/setup: **** COMPLETED ****"
