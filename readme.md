@@ -19,4 +19,3 @@ It will also download and run your brew bundle file if you have one in /{gituser
 Notes and issues
  - had to remove git credentials from the osx keychain
  
- 
