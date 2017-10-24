@@ -35,7 +35,4 @@ source ~/.dotfiles/zsh/setopt.zsh
 # Initialize rbenv
 #eval "$(rbenv init -)"
 
-#use vi command editing
-set -o vi
-
 echo "~/.dotfiles/zshrc: **** COMPLETED ****"
