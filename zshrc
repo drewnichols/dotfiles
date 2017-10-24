@@ -33,6 +33,9 @@ source ~/.dotfiles/zsh/exports.zsh
 source ~/.dotfiles/zsh/setopt.zsh
 
 # Initialize rbenv
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
-# echo "mikegrassotti/dotfiles/zshrc: **** COMPLETED ****"
+#use vi command editing
+set -o vi
+
+echo "~/.dotfiles/zshrc: **** COMPLETED ****"
