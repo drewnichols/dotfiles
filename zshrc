@@ -32,7 +32,6 @@ source ~/.dotfiles/zsh/aliases.zsh
 source ~/.dotfiles/zsh/exports.zsh
 source ~/.dotfiles/zsh/setopt.zsh
 
-# Initialize rbenv
-#eval "$(rbenv init -)"
+#export PATH=/usr/local/bin:$PATH
 
-echo "~/.dotfiles/zshrc: **** COMPLETED ****"
+#echo "~/.dotfiles/zshrc: **** COMPLETED ****"
