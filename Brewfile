@@ -13,8 +13,22 @@ brew 'antigen'
 brew 'ruby-install'
 brew 'chruby'
 brew 'postgres'
+brew 'redis'
+brew 'nodejs'
+brew 'mas'
 cask 'iterm2'
+cask 'google-chrome'
+cask '1password'
 # cask 'visual-studio-code'
 # cask 'vlc'
 cask 'atom'
 cask 'sourcetree'
+cask 'microsoft-teams'
+cask 'microsoft-office'
+cask 'slack'
+cask 'polymail'
+
+mas 'Magnet', id: 441258766
+mas 'CPU LED', id: 448189857
+mas 'microsoft Todo', id: 1274495053
+mas 'wifi explorer', id: 494803304
