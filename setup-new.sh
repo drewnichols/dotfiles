@@ -1,4 +1,7 @@
 # install rosetta
+git clone https://github.com/drewnichols/dotfiles.git .dotfiles
+./dotfiles/script/setup
+
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
