@@ -1,4 +1,8 @@
+# install rosetta
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
 arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+
 echo 'eval $(/usr/local/bin/brew shellenv)' >> /Users/andrewnichols/.zprofile
 eval $(/opt/homebrew/bin/brew shellenv)
 
