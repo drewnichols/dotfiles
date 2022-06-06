@@ -182,6 +182,10 @@
             }
           }
         }
+      },
+      "heroku": {
+        "version": "7.50.0",
+        "bottle": false
       }
     },
     "cask": {
@@ -238,6 +242,30 @@
         "options": {
           "full_name": "polymail"
         }
+      },
+      "google-drive-file-stream": {
+        "version": "44.0.14.1",
+        "options": {
+          "full_name": "google-drive-file-stream"
+        }
+      },
+      "visual-studio-code": {
+        "version": "1.54.1",
+        "options": {
+          "full_name": "visual-studio-code"
+        }
+      },
+      "vlc": {
+        "version": "3.0.12",
+        "options": {
+          "full_name": "vlc"
+        }
+      },
+      "adoptopenjdk11": {
+        "version": "11.0.10,9",
+        "options": {
+          "full_name": "adoptopenjdk11"
+        }
       }
     },
     "mas": {
@@ -247,7 +275,17 @@
       },
       "CPU LED": null,
       "microsoft Todo": null,
-      "wifi explorer": null
+      "wifi explorer": null,
+      "Microsoft Todo": null,
+      "Speedtest by Ookla": null
+    },
+    "tap": {
+      "heroku/brew": {
+        "revision": "0f92fff7f48c413255263f757aab4dab9a4717da"
+      },
+      "adoptopenjdk/openjdk": {
+        "revision": "ed12978ce2258d188002d138aee70395d4b781da"
+      }
     }
   },
   "system": {
@@ -255,7 +293,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.5",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "2d809ca97fec278bc7f5051f86d2a17ce932acda",
+        "Homebrew/homebrew-core": "c01fc3729d12e41efd0891deb8f949c13b838f16",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.3"
