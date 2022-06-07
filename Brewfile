@@ -20,6 +20,7 @@ brew 'redis'
 brew 'nodejs'
 brew 'mas'
 brew 'heroku'
+brew 'gh'
 
 cask 'iterm2'
 cask 'google-chrome'

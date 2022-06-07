@@ -1,17 +1,22 @@
-git clone https://github.com/drewnichols/dotfiles.git .dotfiles
-./dotfiles/script/setup
-
 # install rosetta
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
-arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+#install homebrew
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/drewnichols/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+brew Bundle
 
-echo 'eval $(/usr/local/bin/brew shellenv)' >> /Users/andrewnichols/.zprofile
-eval $(/opt/homebrew/bin/brew shellenv)
+cd ~
+ln -s ~/workspace/dotfiles .dotfiles
+ln -s .dotfiles/zshrc .zshrc
+ruby-install ruby-2.7.4
 
 cd .dotfiles
-brew Bundle
-cd ~
-ln -s .dotfiles/zshrc .zshrc
-ruby-install ruby-2.7.2
 gem install bundler
+
+cd ~/workspace
+gh auth
+git clone http://github.com/liftforward/daas-service
+cd daas-service
+bundle install
