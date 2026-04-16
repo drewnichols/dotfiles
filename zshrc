@@ -33,3 +33,8 @@ source ~/.dotfiles/zsh/exports.zsh
 source ~/.dotfiles/zsh/setopt.zsh
 
 #echo "~/.dotfiles/zshrc: **** COMPLETED ****"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/drewnichols/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
