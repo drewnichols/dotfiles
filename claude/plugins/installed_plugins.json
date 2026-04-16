@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "plugins": {
+    "ruby-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/drewnichols/.claude/plugins/cache/claude-plugins-official/ruby-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-04-14T19:08:26.324Z",
+        "lastUpdated": "2026-04-14T19:08:26.324Z"
+      }
+    ]
+  }
+}

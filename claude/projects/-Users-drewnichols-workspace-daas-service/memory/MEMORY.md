@@ -1,0 +1,1 @@
+- [RSpec it block minimisation](feedback_rspec_style.md) — Consolidate expects into as few `it` blocks as possible; only split when setup/subject genuinely differs
