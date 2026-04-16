@@ -5,6 +5,7 @@
 # export PATH=$PATH:$GOPATH/bin
 export NVM_DIR="$HOME/.nvm"
 # export PATH="./bin:$PATH"
+export PATH="$HOME/.dotfiles/scripts:$PATH"
 
 # Load version control information
 autoload -Uz vcs_info
