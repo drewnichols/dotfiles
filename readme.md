@@ -18,4 +18,4 @@
     ```
     . ./dotfiles/script/setup
     ```
- 1. `ruby-install ruby-2.7.2`
+ 1. `ruby-install ruby-2.7.6`
