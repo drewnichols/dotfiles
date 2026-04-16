@@ -1,0 +1,13 @@
+#!/bin/bash
+
+git fetch -p
+branches=$(git remote show origin | grep 'local out of date' | grep -v master | cut -d ' ' -f 5)
+
+for branch in $branches
+do
+  git checkout $branch
+  git rebase
+done
+
+git checkout master
+git pull
